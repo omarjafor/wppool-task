@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wppool Task</title>
+    <!-- Google Font Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind Link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transition for the mobile menu */
+        #mobileMenu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    
+        #mobileMenu.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-[#2042B6] p-5 md:px-20 md:py-10 lg:px-10">
+        <nav class="flex justify-between items-center gap-y-3 md:flex-row flex-col">
+            <div>
+                <a href="#">
+                    <img src="./asset/img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="flex justify-evenly items-center gap-4">
+                <div class="border border-white rounded-full">
+                    <img src="./asset/img/share.png" alt="share" class="w-12 h-12 p-3 cursor-pointer">
+                </div>
+                <div class="border border-white rounded-3xl p-3">
+                    <h2 class="text-white cursor-pointer">Download the 2024 Report</h2>
+                </div>
+                <div id="openMenu" class="cursor-pointer">
+                    <img src="./asset/img/bar.png" alt="toggle-menu">
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="w-full md:w-3/6 lg:w-96 bg-white rounded-xl p-8 fixed right-1 top-1 hidden">
+            <div class="flex justify-between items-center gap-4">
+                <div class="border border-white rounded-full bg-[#AFCD80]">
+                    <img src="./asset/img/share.png" alt="share" class="w-12 h-12 p-3 cursor-pointer">
+                </div>
+                <div class="border border-white rounded-3xl p-3 bg-[#2042B6]">
+                    <h2 class="text-white cursor-pointer">Download the 2024 Report</h2>
+                </div>
+                <div id="closeMenu" class="cursor-pointer">
+                    <img src="./asset/img/close.png" alt="toggle-close">
+                </div>
+            </div>
+            <div class="">
+                <ul class="text-[#191618] text-[21px] font-normal space-y-4 my-6">
+                    <li>
+                        <a href="#">The WPPOOL Index</a>
+                    </li>
+                    <li>
+                        <a href="#">All Companies</a>
+                    </li>
+                    <li>
+                        <a href="#">Potential Future Listings</a>
+                    </li>
+                    <li>
+                        <a href="#">State of USA</a>
+                    </li>
+                    <li>
+                        <a href="#">About WPPOOL</a>
+                    </li>
+                    <li>
+                        <a href="#">WPPOOL Portfolio Companies</a>
+                    </li>
+                </ul>
+                <div>
+                    <a href="#" class="leading-6 text-2xl text-[#2042B6]">Visit WPPOOL</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
