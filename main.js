@@ -1,4 +1,17 @@
 console.log('hello js');
+
+// Sticky Navbar Scroll 
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    if (window.scrollY > 0) {
+        header.classList.add('bg-blend-transparent');
+        header.classList.remove('bg-blend-banner');
+    } else {
+        header.classList.add('bg-blend-banner');
+        header.classList.remove('bg-blend-transparent');
+    }
+});
+
 //  Mobile Menu open close ------>
 const mobileMenu = document.getElementById('mobileMenu');
 const openMenu = document.getElementById('openMenu');
@@ -19,3 +32,4 @@ closeMenu.addEventListener('click', (e) => {
         mobileMenu.classList.add('hidden');
     }, 300);
 });
+

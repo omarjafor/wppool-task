@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wppool Task</title>
+    <!-- Fav-icon link  -->
+    <link type="image/png" sizes="16x16" rel="icon" href="./asset/img/favicon.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="./asset/img/favicon.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="./asset/img/favicon.png">
     <!-- Google Font Link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,24 +16,12 @@
         href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Tailwind Link  -->
+     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Smooth transition for the mobile menu */
-        #mobileMenu {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            transform: translateX(100%);
-            opacity: 0;
-        }
-    
-        #mobileMenu.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    </style>
 </head>
 
 <body>
-    <header class="bg-[#2042B6] p-5 md:px-20 md:py-10 lg:px-10">
+    <header id="header" class="sticky-header bg-blend-banner p-5 md:px-20 md:pt-10 lg:px-10 sticky top-0 z-10">
         <nav class="flex justify-between items-center gap-y-3 md:flex-row flex-col">
             <div>
                 <a href="#">
@@ -87,10 +79,50 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="">
+        <!-- banner section start here ---->
+        <section class="flex justify-between items-end bg-[#2042B6] p-5 md:px-20 md:py-10 lg:px-10">
+            <div class="w-1/5 grid gap-10">
+                <div>
+                    <h1 class="text-white text-4xl">60</h1>
+                    <p class="text-[#cdcdcd]">Companies</p>
+                </div>
+                <div>
+                    <h1 class="text-white text-4xl">$100B</h1>
+                    <p class="text-[#cdcdcd]">Market cap</p>
+                </div>
+                <div>
+                    <h1 class="text-white text-4xl">3.5x</h1>
+                    <p class="text-[#cdcdcd]">Revenue multiple</p>
+                </div>
+                <div>
+                    <h1 class="text-white text-4xl">60</h1>
+                    <p class="text-[#cdcdcd]">LTM avg.revenue growth rate</p>
+                </div>
+            </div>
+            <div class="relative w-3/5 flex items-center py-5">
+                <img src="./asset/img/maskgroup.png" alt="" class="mix-blend-multiply mx-auto my-5">
+                <div
+                    class="h-[85%] bg-[url('./asset/img/Rectangle.png')] bg-contain bg-no-repeat bg-center flex items-center absolute right-48">
+                    <div class="text-center">
+                        <h1 class="text-white text-[78px]">The WPPOOL Index</h1>
+                        <p class="text-[#cdcdcd] text-[21px] font-[350px]">Monitor the performance of emerging, publicly
+                            traded, financial technology companies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/5 relative">
+                <button class="bg-white p-6 rounded-full shadow-xl absolute right-0 bottom-0">
+                    <img src="./asset/img/arrow_down.png" alt="">
+                </button>
+            </div>
+        </section>
 
+        <section class="">
+            
+        </section>
     </main>
-    <script src="./script.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

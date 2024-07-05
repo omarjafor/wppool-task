@@ -1,0 +1,25 @@
+/* Smooth transition for the mobile menu */
+#mobileMenu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#mobileMenu.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* Sticky navbar  */
+.sticky-header {
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.bg-blend-banner {
+    background-color: #2042B6;
+    opacity: 1;
+}
+
+.bg-blend-transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+}
