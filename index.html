@@ -18,6 +18,7 @@
     <!-- Tailwind Link  -->
      <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -82,7 +83,7 @@
     <main class="">
         <!-- banner section start here ---->
         <section class="flex justify-between items-end bg-[#2042B6] p-5 md:px-20 md:py-10 lg:px-10">
-            <div class="w-1/5 grid gap-10">
+            <div class="lg:w-1/5 grid gap-10">
                 <div>
                     <h1 class="text-white text-4xl">60</h1>
                     <p class="text-[#cdcdcd]">Companies</p>
@@ -100,28 +101,196 @@
                     <p class="text-[#cdcdcd]">LTM avg.revenue growth rate</p>
                 </div>
             </div>
-            <div class="relative w-3/5 flex items-center py-5">
+            <div class="relative lg:w-3/5 flex items-center py-5">
                 <img src="./asset/img/maskgroup.png" alt="" class="mix-blend-multiply mx-auto my-5">
                 <div
-                    class="h-[85%] bg-[url('./asset/img/Rectangle.png')] bg-contain bg-no-repeat bg-center flex items-center absolute right-48">
-                    <div class="text-center">
-                        <h1 class="text-white text-[78px]">The WPPOOL Index</h1>
-                        <p class="text-[#cdcdcd] text-[21px] font-[350px]">Monitor the performance of emerging, publicly
+                    class="h-[85%] bg-[url('./asset/img/Rectangle.png')] bg-contain bg-no-repeat bg-center flex items-center absolute lg:right-48">
+                    <div class="text-center space-y-5">
+                        <h1 class="text-white text-2xl md:text-4xl lg:text-[78px]">The WPPOOL Index</h1>
+                        <p class="text-[#cdcdcd] md:text-[21px] font-[350px]">Monitor the performance of emerging, publicly
                             traded, financial technology companies</p>
                     </div>
                 </div>
             </div>
-            <div class="w-1/5 relative">
+            <div class="w-1/5 relative hidden md:block">
                 <button class="bg-white p-6 rounded-full shadow-xl absolute right-0 bottom-0">
                     <img src="./asset/img/arrow_down.png" alt="">
                 </button>
             </div>
         </section>
+        <!-- banner section end here  -->
 
-        <section class="">
-            
+         <!-- chart section start here  -->
+        <section class="p-4 grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <!-- sidebar start -->
+            <aside class="lg:col-span-1 p-4 bg-[#EFF3F6] rounded-xl shadow">
+                <nav class="space-y-2">
+                    <button
+                        class="accordion-btn flex justify-between items-center w-full text-left font-normal text-base text-gray-700 hover:text-white hover:bg-[#2042B6] rounded-lg hover:shadow-xl p-2">
+                        The Index
+                        <span class="icon flex items-center">
+                            <svg class="w-4 h-4 text-gray-700 hover:text-white plus-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-white minus-icon hidden" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-content hidden space-y-2 pl-4">
+                        <a href="#"
+                            class="block text-gray-700 hover:text-white rounded-lg hover:shadow-xl hover:bg-[#2042B6] p-1">The
+                            Index</a>
+                        <a href="#"
+                            class="block text-gray-700 hover:text-white rounded-lg hover:shadow-xl hover:bg-[#2042B6] p-1">The
+                            Index</a>
+                        <a href="#"
+                            class="block text-gray-700 hover:text-white rounded-lg hover:shadow-xl hover:bg-[#2042B6] p-1">The
+                            Index</a>
+                    </div>
+                    <button
+                        class="accordion-btn flex justify-between items-center w-full text-left font-normal text-base text-gray-700 hover:text-white hover:bg-[#2042B6] rounded-lg hover:shadow-xl p-2">
+                        The Index Tab Two
+                        <span class="icon flex items-center">
+                            <svg class="w-4 h-4 text-gray-700 hover:text-white plus-icon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-white minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button
+                        class="accordion-btn flex justify-between items-center w-full text-left font-normal text-base text-gray-700 hover:text-white hover:bg-[#2042B6] rounded-lg hover:shadow-xl p-2">
+                        The Index Tab Three
+                        <span class="icon flex items-center">
+                            <svg class="w-4 h-4 text-gray-700 hover:text-white plus-icon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-white minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button
+                        class="accordion-btn flex justify-between items-center w-full text-left font-normal text-base text-gray-700 hover:text-white hover:bg-[#2042B6] rounded-lg hover:shadow-xl p-2">
+                        The Index Tab Four
+                        <span class="icon flex items-center">
+                            <svg class="w-4 h-4 text-gray-700 hover:text-white plus-icon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-white minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button
+                        class="accordion-btn flex justify-between items-center w-full text-left font-normal text-base text-gray-700 hover:text-white hover:bg-[#2042B6] rounded-lg hover:shadow-xl p-2">
+                        The Index Tab Five
+                        <span class="icon flex items-center">
+                            <svg class="w-4 h-4 text-gray-700 hover:text-white plus-icon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-white minus-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </nav>
+            </aside>
+            <!-- sidebar end -->
+            <section class="lg:col-span-3 p-4 bg-white rounded-lg shadow">
+                <!-- chart title -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+                    <div class="flex gap-2">
+                        <img src="./asset/img/stick.png" alt="">
+                        <h1 class="text-3xl poppins-500 text-gray-800 col-span-1 lg:col-span-2">The WPPOOL Index</h1>
+                    </div>
+                    <div class="flex flex-wrap gap-5 justify-between items-center col-span-1 lg:col-span-2">
+                        <div class="text-center flex justify-between gap-2 p-4 rounded-lg bg-[#F3F3F3]">
+                            <p class="text-[#FC714D] text-3xl">+66.2%</p>
+                            <p class="text-black text-right text-sm font-medium ml-5">WPPOOL <br> Index</p>
+                            <img src="./asset/img/orange_bar.png" alt="">
+                        </div>
+                        <div class="text-center flex justify-between gap-2 p-4 rounded-lg bg-[#F3F3F3]">
+                            <p class="text-[#615DE3] text-3xl">+26.6%</p>
+                            <p class="text-black text-right text-sm font-medium ml-5">Google <br>Index</p>
+                            <img src="./asset/img/blue_bar.png" alt="">
+                        </div>
+                        <div class="text-center flex justify-between gap-2 p-4 rounded-lg bg-[#F3F3F3]">
+                            <p class="text-[#7CA63A] text-3xl">+34.1%</p>
+                            <div class="flex items-center">
+                                <p class="text-black text-right text-sm font-medium ml-5">Microsoft</p>
+                            </div>
+                            <img src="./asset/img/kolarpatabar.png" alt="">
+                        </div>
+                        <div class="text-center flex justify-between gap-2 p-4 rounded-lg bg-[#F3F3F3]">
+                            <p class="text-[#6F34A1] text-3xl">+17%</p>
+                            <p class="text-black text-right text-sm font-medium ml-5">Twitter <br>Index</p>
+                            <img src="./asset/img/purple_bar.png" alt="">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="flex items-center gap-4 flex-col lg:flex-row space-x-4 mb-4">
+                    <!-- Dropdown Buttons -->
+                    <div class="relative">
+                        <button id="sectorsButton" class="bg-[#2042B6] text-white px-3 py-1 rounded-full focus:outline-none">
+                            Sectors <span class="ml-20">&#9660;</span>
+                        </button>
+                        <div id="sectorsMenu"
+                            class="hidden absolute mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sector 1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sector 2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sector 3</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sector 4</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sector 5</a>
+                        </div>
+                    </div>
+        
+                    <div class="relative">
+                        <button id="ipoButton" class="bg-[#2042B6] text-white px-3 py-1 rounded-full focus:outline-none">
+                            Types of IPO <span class="ml-20">&#9660;</span>
+                        </button>
+                        <div id="ipoMenu"
+                            class="hidden absolute mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Types of IPO 1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Types of IPO 2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Types of IPO 3</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Types of IPO 4</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Types of IPO 5</a>
+                        </div>
+        
+                    </div>
+                    <!-- Time Range Selector -->
+                    <div class="flex right-4 md:absolute bg-[#EFF3F6] rounded-full space-x-2">
+                        <button id="timeButton1Y" class="text-gray-700 px-3 py-1 my-1 rounded-full focus:outline-none">1Y</button>
+                        <button id="timeButtonYTD" class="text-gray-700 px-3 py-1 my-1 rounded-full focus:outline-none">YTD</button>
+                        <button id="timeButton6M"
+                            class="bg-[#2042B6] text-white px-3 py-1 my-1 rounded-full focus:outline-none">6M</button>
+                        <button id="timeButton1M" class="text-gray-700 px-3 py-1 my-1 rounded-full focus:outline-none">1M</button>
+                        <button id="timeButton1W" class="text-gray-700 px-3 py-1 my-1 rounded-full focus:outline-none">1W</button>
+                    </div>
+                </div>
+        
+                <canvas id="myChart"></canvas>
+            </section>
         </section>
+        <!-- chart section end here  -->
     </main>
+    <footer>
+
+    </footer>
     <script src="./main.js"></script>
 </body>
 
