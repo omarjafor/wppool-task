@@ -3,12 +3,36 @@ console.log('hello js');
 // Sticky Navbar Scroll 
 window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
+    const logo = document.getElementById('logo');
+    const shareIcon = document.getElementById('shareIcon');
+    const downloadText = document.getElementById('downloadText');
+    const menuIcon = document.getElementById('menuIcon');
+    const shareBorder = document.getElementById('shareBorder');
+    const downloadBorder = document.getElementById('downloadBorder');
     if (window.scrollY > 0) {
         header.classList.add('bg-blend-transparent');
         header.classList.remove('bg-blend-banner');
+        logo.src = './asset/img/logo-black.png';
+        shareBorder.classList.add('border-[#7CA63A]')
+        shareBorder.classList.remove('border-white')
+        shareIcon.classList.add('img-black');
+        downloadText.classList.add('text-black');
+        downloadText.classList.remove('text-white');
+        downloadBorder.classList.add('border-[#615DE3]')
+        downloadBorder.classList.remove('border-white')
+        menuIcon.classList.add('img-black');
     } else {
         header.classList.add('bg-blend-banner');
         header.classList.remove('bg-blend-transparent');
+        logo.src = './asset/img/logo.png';
+        shareBorder.classList.add('border-white')
+        shareBorder.classList.remove('border-[#7CA63A]')
+        shareIcon.classList.remove('img-black');
+        downloadText.classList.add('text-white');
+        downloadText.classList.remove('text-black');
+        downloadBorder.classList.add('border-white')
+        downloadBorder.classList.remove('border-[#615DE3]')
+        menuIcon.classList.remove('img-black');
     }
 });
 
