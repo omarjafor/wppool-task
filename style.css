@@ -72,6 +72,7 @@
     transform: translateX(0);
     opacity: 1;
 }
+
 /* Sticky navbar  */
 .sticky-header {
     transition: background-color 0.2s ease, opacity 0.2s ease;
@@ -84,10 +85,24 @@
 
 .bg-blend-transparent {
     background-color: transparent;
-    color: black;
     backdrop-filter: none;
 }
 
 .img-black {
     filter: brightness(0);
+}
+
+/* slider with js  */
+.slider {
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 45%;
+    margin-right: 20px;
 }

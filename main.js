@@ -9,15 +9,15 @@ window.addEventListener('scroll', function () {
     const menuIcon = document.getElementById('menuIcon');
     const shareBorder = document.getElementById('shareBorder');
     const downloadBorder = document.getElementById('downloadBorder');
-    if (window.scrollY > 0) {
+    if (window.scrollY > 10) {
         header.classList.add('bg-blend-transparent');
         header.classList.remove('bg-blend-banner');
         logo.src = './asset/img/logo-black.png';
         shareBorder.classList.add('border-[#7CA63A]')
         shareBorder.classList.remove('border-white')
         shareIcon.classList.add('img-black');
-        downloadText.classList.add('text-black');
         downloadText.classList.remove('text-white');
+        downloadText.classList.add('text-black');
         downloadBorder.classList.add('border-[#615DE3]')
         downloadBorder.classList.remove('border-white')
         menuIcon.classList.add('img-black');
@@ -28,8 +28,8 @@ window.addEventListener('scroll', function () {
         shareBorder.classList.add('border-white')
         shareBorder.classList.remove('border-[#7CA63A]')
         shareIcon.classList.remove('img-black');
-        downloadText.classList.add('text-white');
         downloadText.classList.remove('text-black');
+        downloadText.classList.add('text-white');
         downloadBorder.classList.add('border-white')
         downloadBorder.classList.remove('border-[#615DE3]')
         menuIcon.classList.remove('img-black');
@@ -165,3 +165,36 @@ const wpPoolChart = new Chart(ctx, {
         }
     }
 });
+
+// slider with js 
+
+let currentIndex = 0;
+
+const sliderTrack = document.getElementById('sliderTrack');
+const sliderItems = document.querySelectorAll('.slider-item');
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndex < sliderItems.length - 3) {
+        currentIndex++;
+        updateSlider();
+    } else if (currentIndex < sliderItems.length - 2) {
+        currentIndex++;
+        updateSlider(true);
+    }
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+function updateSlider(lastImageFull = false) {
+    const itemWidth = sliderItems[0].clientWidth + 20;
+    if (lastImageFull) {
+        sliderTrack.style.transform = `translateX(-${(currentIndex - 0.7) * itemWidth + (itemWidth / 2)}px)`;
+    } else {
+        sliderTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+}
