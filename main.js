@@ -1,4 +1,3 @@
-console.log('hello js');
 
 // Sticky Navbar Scroll 
 window.addEventListener('scroll', function () {
@@ -36,7 +35,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-//  Mobile Menu open close ------>
+//  Mobile Menu open close toggle ------>
 const mobileMenu = document.getElementById('mobileMenu');
 const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -57,7 +56,7 @@ closeMenu.addEventListener('click', (e) => {
     }, 300);
 });
 
-// Toggle accordion content and icons
+// Chart Toggle accordion content and icons
 document.querySelectorAll('.accordion-btn').forEach(button => {
     button.addEventListener('click', function () {
         const content = button.nextElementSibling;
@@ -68,7 +67,7 @@ document.querySelectorAll('.accordion-btn').forEach(button => {
     });
 });
 
-// Toggle dropdown menus
+// Chart Toggle dropdown menus
 document.getElementById('sectorsButton').addEventListener('click', function () {
     document.getElementById('sectorsMenu').classList.toggle('hidden');
 });
@@ -77,7 +76,7 @@ document.getElementById('ipoButton').addEventListener('click', function () {
     document.getElementById('ipoMenu').classList.toggle('hidden');
 });
 
-// Toggle time range button js here 
+// Chart Toggle time range button js here 
 document.querySelectorAll('[id^="timeButton"]').forEach(button => {
     button.addEventListener('click', function () {
         document.querySelectorAll('[id^="timeButton"]').forEach(btn => {
