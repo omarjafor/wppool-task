@@ -113,16 +113,15 @@ body{
 
 /* footer  part*/
 footer address h3 {
-    color: black;
+    color: #191618;
     font-family: "Messina Sans";
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    line-height: 24px;
 }
 
 footer ul li, footer address p {
-    color: black;
+    color: #191618;
     font-family: "Messina Sans";
     font-size: 20px;
     font-style: normal;

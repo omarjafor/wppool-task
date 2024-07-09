@@ -77,7 +77,7 @@ document.getElementById('ipoButton').addEventListener('click', function () {
     document.getElementById('ipoMenu').classList.toggle('hidden');
 });
 
-// Toggle time range buttons
+// Toggle time range button js here 
 document.querySelectorAll('[id^="timeButton"]').forEach(button => {
     button.addEventListener('click', function () {
         document.querySelectorAll('[id^="timeButton"]').forEach(btn => {
